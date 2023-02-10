@@ -1,0 +1,36 @@
+.roomchat_header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 100px;
+  /* background-color: white; */
+}
+
+.avatar_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+}
+
+.avatar_content img {
+  width: 83px;
+  height: 83px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar_content p {
+  color: white;
+  text-shadow: 5px 5px black;
+}
+
+.avatar_content span {
+  color: white;
+  font-size: 14px;
+}

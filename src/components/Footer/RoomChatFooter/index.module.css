@@ -1,0 +1,30 @@
+.roomchat_footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px;
+}
+
+.roomchat_inputcontent {
+  position: relative;
+}
+
+.roomchat_inputcontent label textarea {
+  width: 100%;
+  resize: none;
+  padding: 12px 25px;
+  border-radius: 100px;
+  outline: 2px solid white;
+  font-size: 16px;
+  color: white;
+  background-color: #242424;
+}
+
+.roomchat_inputcontent__fisendicon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-color: #242424;
+}
