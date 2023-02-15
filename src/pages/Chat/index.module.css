@@ -8,6 +8,18 @@
   max-height: calc(100vh - 107px - 94.4px);
 }
 
+.content_wrapper::-webkit-scrollbar {
+  width: 11px;
+}
+.content_wrapper::-webkit-scrollbar-track {
+  background: rgb(73, 73, 73);
+}
+.content_wrapper::-webkit-scrollbar-thumb {
+  background-color: rgb(123, 121, 121);
+  border-radius: 6px;
+  border: 3px solid rgba(245, 237, 237, 0.363);
+}
+
 .chat_content {
   min-height: calc(100vh - 107px - 94.4px);
   list-style: none;
@@ -34,4 +46,15 @@
   border-radius: 8px;
   color: #ffff;
   background-color: #151515;
+}
+
+.message_content h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+.message_content h4 {
+  margin: 0;
+  padding: 0;
 }

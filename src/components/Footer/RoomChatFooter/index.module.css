@@ -10,7 +10,7 @@
   position: relative;
 }
 
-.roomchat_inputcontent label textarea {
+.roomchat_inputcontent label input {
   width: 100%;
   resize: none;
   padding: 12px 25px;

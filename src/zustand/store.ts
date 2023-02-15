@@ -19,6 +19,7 @@ export interface IUserProps {
 
 export interface IUserDataProps {
     id: number
+    sokcetId: string
     nickName: string
     email: string
     password: string
@@ -118,7 +119,7 @@ export const useStore = create<IStoreProps>()(
 )
 
 export const cart: () => ICartItemProps[] = () => useStore((state) => state.cart, shallow)
-export const user = () => useStore((state) => state.user.data)
+export const user = () => useStore((state) => state.user.data, shallow)
 export const token = () => useStore((state) => state.user.accessToken)
 export const setUserData = () => useStore((state) => state.setUser)
 export const clearUserData = () => useStore((state) => state.clearUser)

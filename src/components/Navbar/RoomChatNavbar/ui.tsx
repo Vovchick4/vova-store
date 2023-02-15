@@ -1,8 +1,17 @@
 import { FC, Fragment } from "react"
+import { AiOutlineUsergroupAdd } from "react-icons/ai"
+import useSWRMutation from "swr/mutation"
+
 import { IUserDataProps } from "../../../hooks/interfaces"
+import FriendController from "./models/use-controllers"
+
 import styles from "./index.module.css"
 
+const controller = new FriendController()
+
 const RoomChatNavbar: FC<{ findedUser: IUserDataProps | undefined, isLoading: boolean }> = ({ findedUser, isLoading }) => {
+    const { trigger: addToFriendTrigger } = useSWRMutation(findedUser ? { method: "POST", url: controller.baseURL + findedUser.id } : null, controller.sendFetcher)
+
     return (
         <Fragment>
             {!isLoading && findedUser !== undefined && (
@@ -15,7 +24,11 @@ const RoomChatNavbar: FC<{ findedUser: IUserDataProps | undefined, isLoading: bo
                         </div>
 
                     </div>
-                    <div>83</div>
+                    <div>
+                        <button onClick={() => addToFriendTrigger()}>
+                            <AiOutlineUsergroupAdd color="#ffff" size={34} />
+                        </button>
+                    </div>
                 </header>
             )}
         </Fragment>

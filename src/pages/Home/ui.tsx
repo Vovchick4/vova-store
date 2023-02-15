@@ -28,7 +28,7 @@ const Accardion: FC<{ children: any, dataLength?: number, type: string, snapshot
     }
 
     return (
-        <div className={classesAccardion} >
+        <div className={classesAccardion}>
             <button onClick={toggleAccardion}>
                 <span>{formatedTitle}</span>
                 <span>

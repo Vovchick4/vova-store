@@ -36,6 +36,20 @@
   margin: 0;
 }
 
+.list_content_main {
+  composes: list_content;
+  overflow: auto;
+  max-height: calc(100vh - 83px);
+}
+
+.category_list > p {
+  text-transform: uppercase;
+  padding: 4px 0;
+  margin: 12px;
+  font-weight: 800;
+  border-bottom: 2px solid #6820f7;
+}
+
 .list {
   display: flex;
   align-items: center;
