@@ -93,6 +93,10 @@ export default function useChat(chatId: string | undefined, currentUser: IUserDa
         if (content_wrapper) {
             content_wrapper.scrollTo(0, content_wrapper.scrollHeight)
         }
+
+        return () => {
+            content_wrapper?.scrollTo(0, content_wrapper.scrollHeight)
+        }
     }, [messeges])
 
     return {

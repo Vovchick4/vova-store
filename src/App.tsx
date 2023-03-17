@@ -1,10 +1,10 @@
 import { Suspense } from 'react'
 import { RouterProvider } from 'react-router-dom'
 
-import routerConfig from './config/router-config'
 import { useAuth } from './hooks'
+import routerConfig from './config/router-config'
 
-function App() {
+export default function App() {
   useAuth({ url: "/auth/get-user" }).trigger()
 
   return (
@@ -14,4 +14,3 @@ function App() {
   )
 }
 
-export default App
